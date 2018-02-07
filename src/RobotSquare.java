@@ -3,6 +3,8 @@
  *    Level 0
  */
 
+import java.awt.Color;
+
 import org.jointheleague.graphical.robot.Robot;
 
 // This recipe draws a square using the Robot
@@ -12,21 +14,24 @@ public class RobotSquare {
  
     	// 1. Make a new Robot
 
-
+    	Robot nagisa = new Robot();
         // 3. Put the robot's pen down
-
-
+    	nagisa.penDown();
+    	nagisa.setPenColor(Color.orange);
+    	nagisa.sparkle();
+    	Robot.setWindowColor(20, 0, 0);
         // 6. Make the robot move as fast as possible
-
+    	nagisa.setSpeed(100);
 
         // 5. Do everything below here 4 times
-
-
+    	for(int i = 0; i < 4; i++) {
+    		
         //         2. Move your robot 200 pixels
-
+    	nagisa.move(200);
 
         //         4. Turn the robot 90 degrees to the right (90 degrees)
-
+    	nagisa.turn(90);
+  }
 
     }
 }
